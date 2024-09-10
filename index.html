@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Villain Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Superhero & Villain Dashboard</h1>
+        </div>
+        <div class="aside">
+            <input type="text" id="searchBar" placeholder="Search by name...">
+            <div id="sel">
+                <label for="pageSize">Results per page:</label>
+                <select id="pageSize">
+                    <option value="10">10</option>
+                    <option value="20" selected>20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="all">All</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <section id="table-container">
+        <table id="heroTable">
+            <thead>
+                <tr>
+                    <th>Icon</th>
+                    <th>Name</th>
+                    <th>Full Name</th>
+                    <th>Powerstats</th>
+                    <th>Race</th>
+                    <th>Gender</th>
+                    <th>Height</th>
+                    <th>Weight</th>
+                    <th>Place of Birth</th>
+                    <th>Alignment</th>
+                </tr>
+            </thead>
+            <tbody id="heroTableBody">
+                <!-- Data will be injected here by JavaScript -->
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <button id="prevPage">Previous</button>
+        <span id="pageInfo"></span>
+        <button id="nextPage">Next</button>
+    </footer>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+
+</html>
