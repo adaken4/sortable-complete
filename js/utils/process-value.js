@@ -1,7 +1,7 @@
 "use strict";
 
-import { extractNumericValue } from "./extract-number";
-import { standardiseUnit } from "./convert-unit";
+import { extractNumericValue } from "./extract-number.js";
+import { standardiseUnit } from "./convert-unit.js";
 
 /**
  * Processes a value based on its data type, handling blanks, numeric conversions, and string formatting.
@@ -39,4 +39,4 @@ export function processValue(value, dataType) {
 
     // Return null if dataType is not recognized
     return null;
-}
+};
