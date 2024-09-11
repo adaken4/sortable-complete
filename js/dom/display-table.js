@@ -1,9 +1,7 @@
 "use strict";
 
+import { getState, setState } from '../state.js';
 import { formatPowerstats } from '../utils/format-powerstats.js';
-import { currentPage } from '../script.js';
-import { rowsPerPage } from '../script.js';
-import { filteredData } from '../script.js';
 import { updatePageInfo } from './update-page-info.js'
 
 /**
@@ -16,7 +14,7 @@ export const displayTable = () => {
     // Get the table body element
     const tableBody = document.getElementById('heroTableBody');
     tableBody.innerHTML = ''; // Clear previous content
-
+    let { currentPage, rowsPerPage, filteredData } = getState();
     // Calculate the slice range for pagination
     const start = (currentPage - 1) * rowsPerPage;
     const end = rowsPerPage === 'all' ? filteredData.length : start + rowsPerPage;
